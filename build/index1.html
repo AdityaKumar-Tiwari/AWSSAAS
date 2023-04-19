@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Gaming Website </title>
+        <link rel="stylesheet" href=" style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        </head>
+        <body>
+            <header>
+                <a href="#" class="logo">Gammers</a>
+                <ul class="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Tournament</a></li>
+                    <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="action">
+                        <div class="Searchbox">
+                            <a href="#"><i class='bx bx-search'></i></a>
+                            <input type="text" placeholder="Search Games">
+                    </div>
+                    <div class="Menu"></div>                   
+           </header>
+           <!-- Home Banner -->
+           <div class="banner">
+            <div class="bg">
+                <div class="content">
+                    <h2>A New Home for<br>
+                        Game Lovers</h2>
+                        <p>We Play To Win</p>
+                        <a href="login.html" class="btn">login</a>
+                    </div>
+                    <image src="game6.png">
+                </div>
+            </div>
+
+            <!--  About  -->
+            <div class="about">
+                <div class="contentbox">
+                    <h2>About us</h2> 
+                    <p>We a group of 3 students created this website for gaming purposes it contains a varity of games
+                        this is a group project for CCA.
+                        Thankyou for Visiting 
+                         </p>
+                         <a href="#">Read more</a>
+                         </div>
+                         <img src="game4.png">
+                         </div>
+                        <!-- Games-->
+                         <div class="games">
+                            <h2> popular games</h2>
+                            <ul>
+                                <li class="list active">All</li>
+                                <li class="list">Mobile Games</li>
+                                <li class="list">Pc Games</li>
+                                </ul>
+                                <div class="cardbox">
+                                    <div class="card" data-item="pc">
+                                        <img src="star.png">
+                                        <div class="content">
+                                            <h4> Star Wars</h4>
+                                            <div class="progress-line"><span></span></div>
+                                            <div class="info">
+                                                <p> Pricing<br><span>$35</span></p>
+                                                <a href="star-battle-master/index.html">Play Now"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card" data-item="pc">
+                                        <img src="game2.png">
+                                        <div class="content">
+                                            <h4> Ludo</h4>
+                                            <div class="progress-line"><span></span></div>
+                                            <div class="info">
+                                                <p> Pricing<br><span>$10</span></p>
+                                                <a href="Ludo/index.html">Play Now"></a>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+
+                                    <div class="card" data-item="pc">
+                                        <img src="keyboardgame.png">
+                                        <div class="content">
+                                            <h4> KeyboardGame</h4>
+                                            <div class="progress-line"><span></span></div>
+                                            <div class="info">
+                                                <p> Pricing<br><span>$16</span></p>
+                                                <a href="Keyboard/index.html">Play Now"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                         <script>
+                            /* sticky NavBar*/
+                            window.addEventListener('scroll',function(){
+                                var header = document.querySelector('header')
+                                header.classList.toggle('sticky',window.scrollY > 0);
+                            });
+                         </script>
+                         <a href="login.html">here</a>
+       </body>
+</html>

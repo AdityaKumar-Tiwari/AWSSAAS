@@ -1,0 +1,119 @@
+<html>
+<head>
+	<title>SIGNUP Page</title>
+	<style>
+		body {
+            background-image: url(https://t3.ftcdn.net/jpg/03/55/60/70/240_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg);
+			background-size: cover;
+			font-family: Arial, sans-serif;
+		}
+		
+		form {
+			border: 2px solid #cccccc00;
+			background-color: rgba(255, 255, 255, 0);
+			width: 400px;
+			margin: 0 auto;
+			padding: 20px;
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		
+		input[type=text], input[type=e-mail], input[type=password] {
+			padding: 10px;
+			margin: 5px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			width: 100%;
+		}
+		
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			width: 100%;
+		}
+		
+		button:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<h2>SIGNUP to Gaming Website</h2>
+		<label for="username"><b>Username</b></label>
+		<input type="text" placeholder="Enter Username" id="username" required>
+		<label for="e-mail"><b> E-mail</b></label>
+        <input type="e-mail" placeholder="Enter E-mail id" id="e-mail" required>
+		<label for="password"><b>Password</b></label>
+		<input type="password" placeholder="Enter Password" id="password" required>
+		<button type="button" value="signup" id="SIGNUP">SIGNUP</button>
+		
+</body>
+
+<script type="module">
+	// Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+	import { getDatabase } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+	import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+
+	// TODO: Add SDKs for Firebase products that you want to use
+	// https://firebase.google.com/docs/web/setup#available-libraries
+  
+	// Your web app's Firebase configuration
+	const firebaseConfig = {
+	  apiKey: "AIzaSyAhQ94IXDuVTZCArdkRHPRT99OKYz3zvG0",
+	  authDomain: "saas-app-93714.firebaseapp.com",
+	  databaseURL: "https://saas-app-93714-default-rtdb.firebaseio.com",
+	  projectId: "saas-app-93714",
+	  storageBucket: "saas-app-93714.appspot.com",
+	  messagingSenderId: "1088988662297",
+	  appId: "1:1088988662297:web:7003a3d714ef0eba957888"
+	};
+  
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	const database = getDatabase(app);
+	const auth = getAuth(app);
+	
+
+	SIGNUP.addEventListener('click',(e) => {
+	try {
+		console.log(11);
+		var email = document.getElementById("e-mail").value;
+		var password = document.getElementById("password").value;
+		var username = document.getElementById("username").value;
+		console.log(email,password,username);
+		createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+		// Signed in 
+		console.log("hello");
+		const user = userCredential.user;
+		window.location.href = 'index1.html';
+		//alert('user created!');
+		// ...
+		})
+     .catch((error) => {
+       const errorCode = error.code;
+       const errorMessage = error.message;
+	   console.log("hello2");
+
+	   alert(errorMessage);
+     // ..
+     });
+	} catch (error) {
+		console.log({error})
+		}
+
+ 	}
+ );
+
+  </script>
+
+</html>
